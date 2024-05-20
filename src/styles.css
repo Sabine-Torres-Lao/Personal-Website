@@ -1,0 +1,523 @@
+/* Default styles */
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fcfaff;
+    color: #333333;
+    background-image: url('../public/images/background-img.png');
+    background-size: contain;
+    background-position: center center;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-left: 30px;
+    color: #6433cd;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+header nav a:visited {
+    color: #333333;
+}
+
+
+header nav a,
+.vertical-navbar a,
+.dropdown-button {
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover,
+.vertical-navbar a:hover,
+.dropdown-button:hover {
+    background-color: #e0e0e0;
+}
+
+header nav a,
+.vertical-navbar a,
+.dropdown-button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #6433cd;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 4% 6% 8%;
+    justify-content: center;
+}
+
+.main-text h1 {
+    padding-left: 20px;
+}
+
+.main-text-name {
+    color: #6433cd;
+}
+
+.main-text-description {
+    margin-top: -10px;
+}
+
+.main-content li {
+    padding: 10px;
+}
+
+.main-content img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+}
+
+.main-content > div {
+    flex: 1;
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links-container {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.links-container img {
+    width: 30px;
+}
+
+.links-container a {
+    margin: 0 20px;
+}
+  
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f2edf7;
+    font-size: 13px;
+}
+
+.footer-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.footer-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.footer-item a {
+    margin: 0;
+    text-decoration: none;
+    color: #6433cd;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #333333;
+    font-size: 17px;
+}
+
+.dropdown-button:visited {
+    color: #333333;
+}
+
+.vertical-navbar {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    z-index: 999;
+}
+
+.dropdown-button {
+    margin: -10px;
+    padding: 10px;
+}
+
+.dropdown-button:hover + .vertical-navbar,
+.vertical-navbar:hover {
+    display: block;
+}
+
+.dropdown-button:hover,
+.vertical-navbar:hover {
+    display: none;
+}
+
+.dropdown-button:hover, .vertical-navbar:hover,
+.dropdown-button:hover ~ .vertical-navbar,
+.vertical-navbar:hover ~ .dropdown-button {
+    display: block;
+}
+
+.vertical-navbar {
+    top: calc(80px - 10px);
+    padding: 20px;
+    margin: -10px;
+}
+
+.vertical-navbar a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-button.active {
+        display: block;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .dropdown-button {
+        display: block;
+    }
+
+    .dropdown-button.active {
+        display: block;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+    }
+    
+    .main-content ul {
+        text-align: left;
+    }
+
+    .main-content p {
+        text-align: justify;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .vertical-navbar {
+        display: none;
+        position: absolute;
+        top: 73px;
+        right: 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .dropdown-button:hover + .vertical-navbar {
+        display: block;
+    }
+
+    .vertical-navbar a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        margin-bottom: 5px;
+    }
+}
+
+.resume-content, .extracurriculars-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+}
+
+.extracurriculars-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    padding-bottom: 10%;
+}
+
+.bordered-container h3 {
+    color: #906fd6;
+}
+
+.resume-content, .extracurriculars-content,
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cv-button {
+    background-color: #6433cd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-right: 90px;
+}
+
+.transcript-button {
+    background-color: #fff;
+    color: #6433cd;
+    border: 2px solid #6433cd;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.bordered-container {
+    background-color: #f2edf7;
+    border-radius: 2%;
+    padding: 20px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.education-section h2,
+.experience-section h2,
+.skills-section h2 {
+    color: #6433cd;
+}
+
+.education-section h3,
+.experience-section h3,
+.skills-section h3 {
+    color: #906fd6;
+}
+
+.bordered-container div,
+.skills-list div {
+    margin: 20px;
+}
+
+.bordered-container li {
+    margin-right: 10%;
+    padding-bottom: 5%;
+}
+
+.skills-list li {
+    padding-bottom: 2.5%;
+}
+
+.skills-list {
+    background-color: #f2edf7;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2%;
+    padding: 5%;
+    margin-bottom: 10%;
+    max-width: 750px;
+    text-align: left;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .column ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    .academic-skills {
+        margin-top: -20px;
+    }
+
+    .bordered-container {
+        max-width: 400px;
+    }
+}
+
+.git-logo {
+    width: 35px;
+    padding-bottom: 15px;
+}
+
+.projects-container {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+.projects-title {
+    text-align: center;
+    padding: 20px;
+}
+
+.project-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #f2edf7;
+    border-radius: 2%;
+    height: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.project-box h2 {
+    color: #906fd6;
+}
+
+.left-side {
+    flex: 1;
+    text-align: left;
+    margin: 5%;
+    padding-right: 10%;
+}
+
+.left-side li {
+    padding-bottom: 5%;
+}
+
+.right-side {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-color: #201930;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px;
+    padding: 4%;
+    border-radius: 2%;
+}
+
+.projects-container ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.main-img  {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .project-box h2 {
+        padding-top: 10%;
+    }
+
+    .project-box {
+        max-width: 400px;
+        flex-direction: column;
+        padding: 5%;
+        margin: 4%;
+    }
+
+    .left-side,
+    .right-side {
+        flex: none;
+    }
+
+    .right-side {
+        order: -1;
+        margin: -30px;
+        padding-bottom: 30px;
+        height: 100%;
+    }
+
+    .main-img {
+        padding-top: 5%;
+        width: 100%; 
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
