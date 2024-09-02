@@ -28,11 +28,11 @@ function About() {
             <h1 className="main-text-name">I'm Sabine.</h1>
             <h1 className="main-text-description">Student | Web Developer | Leader</h1>
             <ul>
-              <li>Dynamic Computer Science student at UNSW, boasting a Distinction WAM</li>
-              <li>Recognized for exceptional leadership qualities, serving as student representative on the Academic Program Review</li>
-              <li>Received Highest Honours as the top of her high school batch of over 400 students, securing a full-ride scholarship in Year 12</li>
-              <li>Exhibited proficiency in website development at QuickSite Guru, mentoring at Tinkertank and research at Study.com</li>
-              <li>Engaged in diverse extracurricular activities including active subcommittee involvement and the completion of programming, language, and art courses</li>
+              <li>Dynamic <b>Computer Science</b> student at <b>UNSW</b>, boasting a <b>Distinction</b> WAM</li>
+              <li>Recognized for exceptional leadership qualities, serving as <b>student representative</b> on the <b>UNSW Academic Program Review</b></li>
+              <li>Received <b>Highest Honours</b> as the top of her high school batch of over 400 students, securing a full-ride scholarship in Year 12</li>
+              <li>Exhibited proficiency in <b>web development</b> at QuickSite Guru, <b>teaching</b> at UNSW College and TinkerTank and <b>research</b> at Ignite Purpose and Study.com</li>
+              <li>Engaged in <b>diverse extracurricular activities</b> including active subcommittee involvement and the completion of programming, language, and art courses</li>
             </ul>
           </div>
         </div>
